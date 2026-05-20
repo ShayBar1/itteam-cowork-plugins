@@ -16,7 +16,7 @@ One plugin: **itteam** — encodes ITTeam's working conventions for Claude Cowor
 ### Slash commands
 
 - **`/finalize`** — invoke `finalize-branded-docx` explicitly, optionally with a source markdown path.
-- **`/log-decision`** — invoke `log-decision` explicitly, optionally with a decision statement.
+- **`/log`** — invoke `log-decision` explicitly, optionally with a decision statement. Only for decisions already made — refuses hedged or future-tense statements.statement.
 
 ## Installation
 

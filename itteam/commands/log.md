@@ -1,17 +1,19 @@
 ---
-description: Log a decision to the current project's decisions-log.md with the next stable ID. Invokes the log-decision skill. Optional argument: the decision statement itself.
+description: Log a decision to the current project's decisions-log.md with the next stable ID. Invokes the log-decision skill. Optional argument: the decision statement itself. Only for decisions already made — not for tentative or future decisions.
 ---
 
-# /log-decision
+# /log
 
 You are being asked to invoke the `log-decision` skill.
 
-If the user typed `/log-decision` followed by a statement, treat that statement as the decision to log. Parse it to extract:
+First, verify the request is actually for a decision that has been made — not a tentative thought, preference, or future plan. If the statement contains hedging words ("probably", "thinking about", "leaning toward", "I think", "tomorrow we'll") or is phrased in future tense, stop and reflect that back: "This sounds like a pending question rather than a decision. Should I add it to the project's open questions instead?"
+
+If the user typed `/log` followed by a statement, treat that statement as the decision to log. Parse it to extract:
 - Title (short present-tense phrasing — derive from the statement)
 - Decision (the statement itself, cleaned up if needed)
 - Rationale (ask if not provided — required field, cannot be skipped)
 
-If the user typed `/log-decision` with no argument, ask:
+If the user typed `/log` with no argument, ask:
 1. What was decided? (Title + decision statement)
 2. Why? (Rationale)
 3. What alternatives were considered? (At least one, with reason rejected)

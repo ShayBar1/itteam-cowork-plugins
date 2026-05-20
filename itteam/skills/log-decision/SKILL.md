@@ -1,16 +1,33 @@
 ---
 name: log-decision
-description: Use this skill when Shay states a decision has been made and asks to log, record, or capture it in the project's decisions log. Trigger phrases include "log this decision", "record this decision", "add to decisions log", "we decided X — log it", "capture this in the decisions log", or the slash command /log-decision. The skill appends a properly structured entry to Projects\<client>\00_Project-Context\decisions-log.md with the next stable ID (D-NNN). Do NOT use this skill to invent decisions or to log items that are actions, questions, or assumptions — those have separate homes.
+description: Use this skill when Shay states a decision has been made AS A COMPLETED ACT and asks to log, record, or capture it in the project's decisions log. Trigger phrases include "log this decision", "record this decision", "we decided X", "we agreed on Y — log it", "capture this in the decisions log", or the /log slash command. Do NOT use for tentative, hedged, future-tense, or in-progress decisions ("probably", "thinking about", "leaning toward", "I think we're going with", "we'll probably", "tomorrow we'll decide"). The decision must be stated as already made, in past or present-perfect tense, not as a forecast or preference.
 ---
 
 # Log a decision
 
 ## When this skill fires
 
-Activate when Shay explicitly says a decision has been made and needs to be recorded. Trigger phrases: "log this decision", "record this", "add to decisions log", "we decided X", "capture this decision", or the slash command `/log-decision`.
+Activate when Shay states a decision has been made AS A COMPLETED ACT and needs to be recorded.
 
-Do NOT activate for:
-- Discussion of options without a final decision ("we were thinking maybe X" — that's not a decision).
+Trigger phrases (decision already made):
+- "log this decision"
+- "record this"
+- "add to decisions log"
+- "we decided X"
+- "we agreed on Y — log it"
+- "capture this decision"
+- The slash command `/log` (renamed from `/log-decision`)
+
+DO NOT activate for tentative, hedged, future-tense, or in-progress phrasing. Examples that look like decisions but aren't:
+- "probably", "maybe", "likely" → tentative
+- "we're thinking about", "leaning toward", "considering" → in-progress
+- "I think we're going with X", "I want to go with X" → preference, not commitment
+- "tomorrow we'll decide", "we'll probably pick", "next week we should pick" → future
+- "we were thinking maybe X" → exploration
+
+If the user appears to be thinking out loud or pre-deciding, do not activate. Instead, the chat layer can offer to capture the item as an open question (Q-NNN in the relevant document) but log-decision must not fire.
+
+Also do not activate for:
 - Action items, open questions, risks, or assumptions — those go to different files or sections.
 - Decisions that contradict an existing active decision unless Shay also says "supersede D-NNN" or "reverse D-NNN".
 
