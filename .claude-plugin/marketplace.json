@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "ITTeam Cowork plugin marketplace — internal workflows for project setup, branded deliverable finalization, meeting summaries, and decision logging. Enforces PPT methodology, plan-then-execute discipline, stable IDs, and brand standards.",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "itteam",
       "source": "./itteam",
       "description": "ITTeam plugin — project setup, branded deliverable finalization, meeting summaries, and decision logging.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "productivity",
       "keywords": ["itteam", "project-management", "deliverables", "decisions", "meetings", "agency"]
     }
