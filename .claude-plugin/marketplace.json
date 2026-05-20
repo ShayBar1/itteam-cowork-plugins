@@ -1,0 +1,22 @@
+{
+  "name": "itteam-marketplace",
+  "owner": {
+    "name": "Shay Bar",
+    "email": "shaybar@itteam.co.il",
+    "url": "https://itteam.co.il"
+  },
+  "metadata": {
+    "description": "ITTeam Cowork plugin marketplace — internal workflows for project setup, branded deliverable finalization, meeting summaries, and decision logging. Enforces PPT methodology, plan-then-execute discipline, stable IDs, and brand standards.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "itteam",
+      "source": "./itteam",
+      "description": "ITTeam plugin — project setup, branded deliverable finalization, meeting summaries, and decision logging.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["itteam", "project-management", "deliverables", "decisions", "meetings", "agency"]
+    }
+  ]
+}
