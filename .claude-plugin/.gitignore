@@ -13,3 +13,6 @@ desktop.ini
 # Local-only experiments
 _scratch/
 *.local.md
+
+# Local-only workaround for Cowork marketplace sync issue
+sync-to-cowork-local.ps1
