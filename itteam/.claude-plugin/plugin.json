@@ -1,6 +1,6 @@
 {
   "name": "itteam",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ITTeam plugin — ITTeam-specific workflows for project setup, deliverable finalization, meeting documentation, and decision logging. Enforces PPT methodology, plan-then-execute discipline, stable IDs, and branded output standards.",
   "author": {
     "name": "Shay Bar",
