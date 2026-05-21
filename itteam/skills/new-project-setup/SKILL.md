@@ -1,6 +1,6 @@
 ---
 name: new-project-setup
-description: Use this skill when Shay asks to set up, create, initialize, or scaffold a new ITTeam project. Trigger phrases include "new project for [client]", "set up a project for [client]", "create the [client] project", "scaffold [client]", "initialize [client] workspace". This skill creates the standard 15-folder project structure under D:\Claude-Cowork\Projects\<name>\ following ITTeam's naming conventions (single-engagement clients use Client; multi-engagement clients use Client-Engagement) and seeds the three 00_Project-Context files (project-brief, decisions-log, glossary). Do NOT use to modify existing projects or to create folders outside the Projects\ tree.
+description: Use this skill when Shay asks to set up, create, initialize, or scaffold a new ITTeam project. Trigger phrases include "new project for [client]", "set up a project for [client]", "create the [client] project", "scaffold [client]", "initialize [client] workspace". This skill creates the standard 16-folder project structure under D:\Claude-Cowork\Projects\<name>\ following ITTeam's naming conventions (single-engagement clients use Client; multi-engagement clients use Client-Engagement) and seeds the three 00_Project-Context files (project-brief, decisions-log, glossary). Do NOT use to modify existing projects or to create folders outside the Projects\ tree.
 ---
 
 # New project setup
@@ -16,7 +16,7 @@ Do NOT activate for:
 
 ## This skill plans before executing
 
-Per Global Instructions, plan-then-execute. Creating a new project = 15 new folders + 3 new files. That's enough surface area to warrant a plan and approval before writing.
+Per Global Instructions, plan-then-execute. Creating a new project = 16 new folders + 3 new files. That's enough surface area to warrant a plan and approval before writing.
 
 ## Required reads before planning
 
@@ -96,7 +96,7 @@ List every folder to be created:
 - `Projects\<FolderName>\04_Knowledge-Base\`
 - `Projects\<FolderName>\05_Meetings\`
 
-Total: 15 folders (project root + 14 subfolders).
+Total: 16 folders (project root + 14 subfolders).
 
 ### Folder purposes
 - `00_Project-Context\` — brief, decisions log, glossary (project's identity files)
@@ -124,7 +124,7 @@ Total: 15 folders (project root + 14 subfolders).
 
 Two seed assumptions:
 - A-01 — Project status defaulted to "active" upon workspace creation. Falsification trigger: client cancels before kickoff.
-- A-02 — Folder structure follows ITTeam's standard 15-folder template. Falsification trigger: project needs deviate (research-heavy, technical-heavy, etc.).
+- A-02 — Folder structure follows ITTeam's standard 16-folder template. Falsification trigger: project needs deviate (research-heavy, technical-heavy, etc.).
 
 If multi-engagement (Case 2 or 3): add A-03 noting the relationship to sibling projects under the same client prefix, e.g., "Sibling project at Projects\Clalit-Maya-BPSDTracker\ exists; engagements are distinct (separate SOW, scope) but the client is shared."
 
@@ -133,7 +133,7 @@ If multi-engagement (Case 2 or 3): add A-03 noting the relationship to sibling p
 - Date: today
 - Status: active
 - Decided by: Shay Bar
-- Decision: "Initialize project workspace for <FolderName> using ITTeam's standard 15-folder project template."
+- Decision: "Initialize project workspace for <FolderName> using ITTeam's standard 16-folder project template."
 - Rationale: "Standard structure ensures consistency across the parallel ITTeam projects, supports decision/assumption/risk tracking with stable IDs, and aligns with PPT methodology and infosec-aware staging."
 - Alternatives considered: flat folder (rejected — doesn't scale); per-deliverable folder tree only (rejected — no place for inputs/context/KB); copying an existing project's tree wholesale (rejected — would inherit stale content)
 - Implications: project ready for kickoff; brief and glossary to be populated during discovery
@@ -142,7 +142,7 @@ If multi-engagement (Case 2 or 3): add A-03 noting the relationship to sibling p
 **`glossary.md`**: two sections — section 1 titled `<ClientName>-specific terms`, section 2 titled `General terms used in this engagement`. Both stubbed `TBD — to be filled as terms surface`. Standard entry format and cross-reference footer.
 
 ### Stage 4 — Verification
-- List the 15 created folders, confirm all exist
+- List the 16 created folders, confirm all exist
 - List the 3 created files, confirm content matches what was specified in the plan
 - Confirm no folder or file was created outside `Projects\<FolderName>\`
 
