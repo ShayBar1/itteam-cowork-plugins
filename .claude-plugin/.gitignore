@@ -1,18 +1,60 @@
-# Windows
+# ============================================================
+# .gitignore — itteam-cowork-plugins
+# Replace the existing root .gitignore with this file.
+# ============================================================
+
+# ----- Local tooling scripts (the whole class, not just one file) -----
+*.ps1
+*.bat
+*.cmd
+*.vbs
+
+# ----- Environment files and secrets -----
+.env
+.env.*
+*.env
+*.env.local
+*.env.*.local
+
+# ----- Cryptographic material -----
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+
+# ----- Generic secret patterns -----
+secrets.*
+secret.*
+credentials.*
+config.local.*
+*.secret
+*.token
+*.apikey
+
+# ----- OS artifacts -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# macOS
-.DS_Store
-
-# Editors
+# ----- Editors -----
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+*.orig
 
-# Local-only experiments
+# ----- Local scratch / experiments -----
 _scratch/
 *.local.md
-
-# Local-only workaround for Cowork marketplace sync issue
-sync-to-cowork-local.ps1
+_local/
+tmp/
+temp/
